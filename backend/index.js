@@ -131,3 +131,12 @@ mongoose.connect(uri)
     });
   })
   .catch((err) => console.error("DB connection failed:", err));
+
+  app.get("/allOrders", async (req, res) => {
+  try {
+    let allOrders = await OrdersModel.find({});
+    res.json(allOrders);
+  } catch (err) {
+    res.status(500).json({ error: "Failed to fetch orders" });
+  }
+});
