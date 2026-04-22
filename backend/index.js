@@ -18,7 +18,7 @@ const app = express();
 app.use(cors({
   origin: [
     "https://stocktradingweb-1.onrender.com",   // ← replace this
-    "https://stocktradingweb-2.onrender.com/"   // ← replace this
+    "https://stocktradingweb-2.onrender.com"   // ← replace this
   ],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
